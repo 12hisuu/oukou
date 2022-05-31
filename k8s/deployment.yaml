@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vbnxc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vbnxc
+  template:
+    metadata:
+      labels:
+        app: vbnxc
+    spec:
+      containers:
+      - image: okteto.dev/heroku5d5:latest
+        name: vbnxc
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ProxySite
+          value: "icook.tw"
+        - name: Vless_UUID
+          value: "770fc9a7-3639-46fb-a685-56cba929b3f7"
+        - name: Vless_Path
+          value: "/vlesss233"
+        - name: Vmess_UUID
+          value: "770fc9a7-3639-46fb-a685-56cba929b3f7"
+        - name: Vmess_Path
+          value: "/vmesss244"
+        - name: Share_Path
+          value: "/share233"
