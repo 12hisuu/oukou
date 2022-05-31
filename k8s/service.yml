@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: vbnxc
+  name: oukou
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "vbnxc"
+  - name: "oukou"
     port: 8080
   selector:
-    app: vbnxc
+    app: oukou
