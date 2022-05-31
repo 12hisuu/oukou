@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vbnxc
+  name: oukou
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: vbnxc
+      app: oukou
   template:
     metadata:
       labels:
-        app: vbnxc
+        app: oukou
     spec:
       containers:
-      - image: okteto.dev/heroku5d5:latest
-        name: vbnxc
+      - image: okteto.dev/oukou:latest
+        name: oukou
         ports:
         - containerPort: 8080
         env:
